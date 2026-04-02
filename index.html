@@ -1,13 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uw-frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Dashboard</title>
+
+  <!-- Tailwind -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#026e9f",
+            backgroundLight: "#f5f7f8",
+            backgroundDark: "#0f1d23"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
+</head>
+
+<body class="bg-backgroundLight">
+
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.tsx"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf_Zs7bjEx1EBA49sZ7pdtBUE6Fibzaa4&v=beta&libraries=marker"></script>
+</body>
+
 </html>
