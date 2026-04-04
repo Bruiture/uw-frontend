@@ -9,6 +9,66 @@
 
   <title>Admin Dashboard</title>
 
+  <style>
+
+    @media print {
+
+      /* Hide everything */
+      body * {
+        visibility: hidden;
+      }
+
+      /* Show only print area */
+      #print-area, #print-area * {
+        visibility: visible;
+      }
+
+      /* Position print content */
+      #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+
+      /* Hide buttons */
+      .print\:hidden {
+        display: none !important;
+      }
+
+      /* A4 size */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      #print-area {
+        width: 210mm;
+        height: 297mm;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        overflow: hidden;
+      }
+
+      table, tr, td {
+        page-break-inside: avoid;
+      }
+
+      @media print {
+        #print-area {
+          transform: scale(0.95);
+          transform-origin: top left;
+        }
+      }
+
+    }
+
+  </style>
+
   <!-- Tailwind -->
 
   <script src="https://cdn.tailwindcss.com"></script>
