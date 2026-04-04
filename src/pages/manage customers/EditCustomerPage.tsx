@@ -1,10 +1,9 @@
 import { useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const EditCustomerPage = () => {
 
   const navigate = useNavigate()
-  const { id } = useParams()
 
   // 🔥 mock data (later replace with API)
   const [form, setForm] = useState({

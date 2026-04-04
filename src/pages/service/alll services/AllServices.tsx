@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router-dom"
+
 
 const AllServices = () => {
-  const navigate = useNavigate()
   return (
     <div className="space-y-4">
 

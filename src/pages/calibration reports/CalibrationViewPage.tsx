@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom"
 const CalibrationViewPage = () => {
 
   const navigate = useNavigate()
-  const { id } = useParams() // now works
 
   const customer = {
     name: "Janice AKAR (P) LTD",

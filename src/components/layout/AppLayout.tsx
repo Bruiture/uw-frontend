@@ -7,7 +7,7 @@ const AppLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
-  const location = useLocation()
+
 
   const handleLogout = () => {
     localStorage.removeItem("token")
