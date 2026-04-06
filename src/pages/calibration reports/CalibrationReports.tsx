@@ -43,10 +43,25 @@ const CalibrationReports = () => {
   return (
     <div className="space-y-4">
 
-      <h2 className="text-lg font-semibold text-slate-700">
-        Select Customer to View Scales
-      </h2>
-      <div className="text-sm text-slate-500">Calibration Reports</div>
+      <div className="flex justify-between items-center">
+
+        <div>
+          <h2 className="text-lg font-semibold text-slate-700">
+            Select Customer to View Scales
+          </h2>
+          <div className="text-sm text-slate-500">
+            Calibration Reports
+          </div>
+        </div>
+
+        <button
+          onClick={() => navigate("/calibration-reports/create")}
+          className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg shadow hover:bg-blue-700 transition"
+        >
+          + Create Calibration Report
+        </button>
+
+      </div>
 
       {/* Search */}
       <div className="bg-white border rounded-xl shadow p-3">

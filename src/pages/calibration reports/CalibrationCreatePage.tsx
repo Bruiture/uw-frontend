@@ -6,19 +6,26 @@ const CalibrationCreatePage = () => {
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
+    customerName: "",
+    address: "",
+    contactName: "",
+    phone: "",
+
     make: "",
     model: "",
     serial: "",
     capacity: "",
     location: "",
+
     loads: ["", "", "", "", "", "", ""],
+
     mpe: "",
     frequency: "30",
     lastCalibrationDate: "",
     calibratedBy: ""
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setForm(prev => ({ ...prev, [name]: value }))
   }
@@ -53,9 +60,62 @@ const CalibrationCreatePage = () => {
       {/* Form */}
       <div className="bg-white border rounded-xl shadow p-5 max-w-3xl">
 
+        {/* Customer Details */}
+        <div className="mb-5">
+          <h3 className="text-sm font-semibold text-slate-700 mb-2">
+            Customer Details
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div>
+              <label className="text-sm">Customer Name</label>
+              <input
+                name="customerName"
+                value={form.customerName}
+                onChange={handleChange}
+                className="w-full border rounded px-3 py-2 text-sm"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm">Contact Name</label>
+              <input
+                name="contactName"
+                value={form.contactName}
+                onChange={handleChange}
+                className="w-full border rounded px-3 py-2 text-sm"
+              />
+            </div>
+
+            <div className="md:col-span-2">
+              <label className="text-sm">Address</label>
+              <input
+                name="address"
+                value={form.address}
+                onChange={handleChange}
+                className="w-full border rounded px-3 py-2 text-sm"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm">Phone</label>
+              <input
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                className="w-full border rounded px-3 py-2 text-sm"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        <hr className="my-4" />
+
+        {/* Scale Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-          {/* Make */}
           <div>
             <label className="text-sm">Make</label>
             <input
@@ -66,7 +126,6 @@ const CalibrationCreatePage = () => {
             />
           </div>
 
-          {/* Model */}
           <div>
             <label className="text-sm">Model</label>
             <input
@@ -77,7 +136,6 @@ const CalibrationCreatePage = () => {
             />
           </div>
 
-          {/* Serial */}
           <div>
             <label className="text-sm">Serial</label>
             <input
@@ -88,7 +146,6 @@ const CalibrationCreatePage = () => {
             />
           </div>
 
-          {/* Capacity */}
           <div>
             <label className="text-sm">Capacity</label>
             <input
@@ -99,7 +156,6 @@ const CalibrationCreatePage = () => {
             />
           </div>
 
-          {/* Location */}
           <div className="md:col-span-2">
             <label className="text-sm">Location</label>
             <input
