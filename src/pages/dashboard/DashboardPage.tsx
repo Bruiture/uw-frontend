@@ -12,7 +12,7 @@ const DashboardPage = () => {
         { title: "All Services Calls", path: "/service/all" },
         { title: "Completed Services Calls", path: "/service/completed" },
         { title: "Unsigned Services Calls", path: "/service/unsigned" },
-        { title: "Unreturned Scales Calls", path: "/service/unreturned" }
+        { title: "Unreturned Services Calls", path: "/service/unreturned" }
       ]
     },
     {
